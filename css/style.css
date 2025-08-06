@@ -55,12 +55,16 @@
 }
 .section-title{
   margin-bottom: 12px;
+  font-size: 3.12rem;
 }
 .banner{
   margin-top: 120px;
   display: flex;
   align-items: center;
   gap:0;
+}
+.banner img{
+  width: 100%;
 }
 /* plant section styles */
 .plants{
@@ -71,8 +75,8 @@
   margin-top: 50px;
 }
 .plant{
-  max-width: 270px;
-  max-height: 485px;
+  /* max-width: 270px;
+  max-height: 485px; */
 }
 .plant img{
   width: 100%;
@@ -93,7 +97,9 @@
   display: flex;
   gap: 60px;
 }
-
+.img-container img{
+  /* width: 100%; */
+}
 #badge{
   position: absolute;
   top: -130px;
@@ -111,6 +117,105 @@
   font-size: 3.12rem;
   margin: 0; 
 }
+/* Latest  Deals section */
+.latest{
+  margin-top: 133px;
+  /* text-align: center; */
+  /* margin-bottom: 120px; */
+}
+.latest-plants{
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(1,1fr 2fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 28px;
+}
+.bloom{
+  background-image: url(../assets/deal-bloom.png);
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+}
+.ana{
+    background-image: url(../assets/deal-ana.png);
+     grid-column: 1 / 2;
+     grid-row: 2 / 3;
+}
+.zabo{
+  background-image: url(../assets/deal-zabo.png);
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.latest-plant{
+  /* max-width: 367px;
+  max-height: 221px; */
+  padding:60px 49px;
+  border-radius: 14px;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.latest-info{
+  text-align: center;
+}
+.latest-plant a{
+  color: #ffff;
+}
+.deal-section-title{
+  font-size: 1.25rem;
+  color: #ffff;
+}
+/* Join Section styles */
+.join{
+  background-image: url(../assets/news-letter-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1440px;
+  margin-top: 120px;
+}
+.joining-part{
+  padding: 195px 305px ;
+}
+.join-title{
+  font-size: 3.12rem;
+  color: #ffff;
+  margin-bottom: 23px;
+  text-align: center;
+}
+input[type=email]{
+  padding: 15px 400px 15px 20px;
+  margin: 0;
+}
+input[type=button]{
+  padding: 19px 53px;
+  background-color: #E95A08;
+  color: white;
+  border: 0;
+  /* margin: 0; */
+}
+.join-container{
+  display: flex;
+}
+/* Footer Section Styles */
+.logo{
+  max-width: 359px;
+  max-height: 179px;
+}
+.box{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 160px;
+}
+.features-links{
+  list-style: none;
+  line-height: 32px;
+}
+.feature-link a{
+  text-decoration: none;
+  color: rgba(107, 114, 128, 1);
+  margin-bottom: 10px;
+}
 /* Small Device styles */
 @media screen and (max-width:576px) {
   .nav{
@@ -122,16 +227,60 @@
   .banner{
     flex-direction: column-reverse;
   }
+  .img-container img {
+    width: 100%;
+  }
   /* Plants section */
+  .plant{
+    width: 171px;
+    height: 340px;
+  }
+  .primary-btn{
+    padding: 19px 50px;
+  }
   .plants{
     grid-template-columns: repeat(2,1fr);
     /* align-items: center;
     justify-items: center; */
+    column-gap: 20px;
+    row-gap: 29px;
   }
   .lovers{
     flex-direction: column;
   }
+  .join{
+    justify-items: center;
+    text-align: center;
+    /* padding-right: 190px; */
+  }
+  /* .joining-part{
+    margin-left: 3px;
+  } */
   #badge{
     display: none;
   }
+  .join-title{
+    font-size: 1.25rem;
+  }
+  .joining-part{
+    margin-left:10px;
+   padding: 110px 36px 64px 36px;
+  }
+  input[type=email]{
+  padding: 15px 10px 15px 20px;
+}
+.box{
+  flex-direction: column;
+  padding: 5px;
+}
+.latest-plants{
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: auto;
+  row-gap: 20px;
+  column-gap: 0; 
+}
+.zabo{
+  grid-column:1 / 3 ;
+  grid-row: auto;
+}
 }
